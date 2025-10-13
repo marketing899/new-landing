@@ -1,0 +1,170 @@
+<footer style="background-color: #1f2937; color: white; padding: 32px; text-align: center;">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px;">
+            <p style="font-size: 0.875rem;">&copy; 2025 Your Company Name. All rights reserved. | <a href="#" style="color: #818cf8; text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: #818cf8; text-decoration: none;">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <button id="floating-cta" onclick="openModal()" style="position: fixed; bottom: 24px; right: 24px; z-index: 1000; background-color: #6366f1; color: white; padding: 12px 24px; border-radius: 9999px; font-weight: 700; border: none; cursor: pointer; font-size: 1rem; box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4); display: none; opacity: 0; transform: translateY(20px); transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; animation: bounceScale 2s infinite ease-in-out;">
+        Book Free Consultation
+    </button>
+
+    <div id="consultation-modal" style="display: none; position: fixed; z-index: 1001; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease-in-out;">
+        <div style="background-color: #ffffff; padding: 40px; border-radius: 24px; box-shadow: 0 15px 35px rgba(0,0,0,0.3); position: relative; max-width: 90%; width: 550px; transform: translateY(30px); transition: transform 0.3s ease-in-out; box-sizing: border-box; text-align: center;">
+            <span onclick="closeModal()" style="position: absolute; top: 16px; right: 16px; font-size: 2.2rem; font-weight: bold; color: #94a3b8; cursor: pointer; line-height: 1;">&times;</span>
+            <h2 style="font-size: 1.875rem; font-weight: 700; color: #4338ca; margin-bottom: 16px;">Secure Your Free PCOS Consultation!</h2>
+            <p style="color: #475569; margin-bottom: 24px; font-size: 1rem;">Fill out this quick form to schedule your complimentary, no-obligation session with our expert doctor. It's the first step towards feeling better.</p>
+            <form id="modal-form">
+                <div style="margin-bottom: 16px;">
+                    <label for="modal-name" style="display: block; color: #374151; font-size: 0.875rem; font-weight: 700; margin-bottom: 8px; text-align: left;">Full Name</label>
+                    <input type="text" id="modal-name" name="name" placeholder="Enter your full name" required style="padding: 0.85rem 1.25rem; border: 1px solid #cbd5e1; border-radius: 0.75rem; width: 100%; font-size: 1.05rem; color: #334155; box-sizing: border-box;">
+                </div>
+                <div style="margin-bottom: 16px;">
+                    <label for="modal-email" style="display: block; color: #374151; font-size: 0.875rem; font-weight: 700; margin-bottom: 8px; text-align: left;">Email Address</label>
+                    <input type="email" id="modal-email" name="email" placeholder="Enter your email address" required style="padding: 0.85rem 1.25rem; border: 1px solid #cbd5e1; border-radius: 0.75rem; width: 100%; font-size: 1.05rem; color: #334155; box-sizing: border-box;">
+                </div>
+                <div style="margin-bottom: 24px;">
+                    <label for="modal-phone" style="display: block; color: #374151; font-size: 0.875rem; font-weight: 700; margin-bottom: 8px; text-align: left;">Phone Number</label>
+                    <input type="tel" id="modal-phone" name="phone" placeholder="Enter your phone number" required style="padding: 0.85rem 1.25rem; border: 1px solid #cbd5e1; border-radius: 0.75rem; width: 100%; font-size: 1.05rem; color: #334155; box-sizing: border-box;">
+                </div>
+                <button type="submit" id="modal-submit-btn" style="background-color: #6366f1; color: white; padding: 1rem 2.5rem; border-radius: 0.75rem; font-weight: 700; border: none; cursor: pointer; width: 100%; font-size: 1.125rem; box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4); display: inline-flex; align-items: center; justify-content: center; transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;">
+                    <span id="button-text">Schedule My Free Consultation</span>
+                    <div id="loading-spinner" style="border: 4px solid rgba(255, 255, 255, 0.3); border-top: 4px solid #fff; border-radius: 50%; width: 24px; height: 24px; animation: spin 1s linear infinite; margin-left: 12px; display: none;"></div>
+                </button>
+                <p style="font-size: 0.75rem; color: #64748b; margin-top: 16px;">Your privacy matters. We will only use your information to schedule your consultation.</p>
+            </form>
+        </div>
+        <style>
+            /* Modal display logic with transition */
+            #consultation-modal.show {
+                display: flex !important;
+                opacity: 1 !important;
+            }
+            #consultation-modal.show > div {
+                transform: translateY(0) !important;
+            }
+            /* Input focus styles - cannot be purely inline on input elements */
+            input[type="text"]:focus,
+            input[type="email"]:focus,
+            input[type="tel"]:focus {
+                outline: none !important;
+                border-color: #6366f1 !important;
+                box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.3) !important;
+            }
+            /* Close button hover */
+            #consultation-modal .close-button:hover {
+                color: #64748b !important;
+                transform: rotate(90deg) !important;
+            }
+            /* Animations for floating button and spinner */
+            @keyframes bounceScale {
+                0%, 100% { transform: translateY(0) scale(1); }
+                50% { transform: translateY(-5px) scale(1.02); }
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        </style>
+    </div>
+
+    <script>
+        // All your JavaScript code goes here
+        const modal = document.getElementById('consultation-modal');
+        const floatingCta = document.getElementById('floating-cta');
+        const heroForm = document.getElementById('hero-form');
+        const modalForm = document.getElementById('modal-form');
+        const modalSubmitBtn = document.getElementById('modal-submit-btn');
+        const buttonText = document.getElementById('button-text');
+        const loadingSpinner = document.getElementById('loading-spinner');
+
+        function openModal() {
+            modal.style.display = 'flex'; // Use flex to center
+            setTimeout(() => {
+                modal.style.opacity = '1';
+                if (modal.children[0]) {
+                    modal.children[0].style.transform = 'translateY(0)';
+                }
+                document.getElementById('modal-name').focus();
+            }, 50);
+        }
+
+        function closeModal() {
+            modal.style.opacity = '0';
+            if (modal.children[0]) {
+                modal.children[0].style.transform = 'translateY(30px)';
+            }
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300); // Match CSS transition duration
+        }
+
+        // Close modal when clicking outside of the content
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        };
+
+        // Show/hide floating button on scroll
+        window.onscroll = function() {
+            const scrollThreshold = 400; // Pixels to scroll before showing button
+            if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+                floatingCta.style.display = 'flex';
+                setTimeout(() => {
+                    floatingCta.style.opacity = '1';
+                    floatingCta.style.transform = 'translateY(0)';
+                }, 10); // Slight delay for transition
+            } else {
+                floatingCta.style.opacity = '0';
+                floatingCta.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    floatingCta.style.display = 'none';
+                }, 300); // Match transition duration
+            }
+        };
+
+        // Handle initial hero form submission (direct call to open modal)
+        heroForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent actual form submission
+            openModal(); // Just open the more detailed modal
+        });
+
+        // Handle modal form submission (simulated for now)
+        modalForm.addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            buttonText.textContent = 'Submitting...';
+            loadingSpinner.style.display = 'block';
+            modalSubmitBtn.disabled = true; // Disable button during submission
+
+            const name = document.getElementById('modal-name').value;
+            const email = document.getElementById('modal-email').value;
+            const phone = document.getElementById('modal-phone').value;
+
+            console.log('Modal Form Data:', { name, email, phone });
+
+            // --- IMPORTANT: LeadSquared Integration Placeholder ---
+            // This is where you would integrate with LeadSquared.
+            // As mentioned, for pure HTML/inline, this typically means a server-side script
+            // that receives this data and then forwards it securely to LeadSquared's API.
+            // Directly sending from client-side JavaScript to LeadSquared's API can expose
+            // your API keys if not handled carefully with CORS and IP restrictions.
+            //
+            // If LeadSquared provides a direct client-side JS form submission snippet,
+            // that would be the only way to avoid a backend for this specific case.
+            // Replace this entire section with their provided script if applicable.
+
+            // --- Simulated Submission for Demo ---
+            await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate network delay
+            alert('Fantastic! Your free consultation is booked. We will contact you within 24 hours to confirm the details.');
+            closeModal();
+
+            // Reset form state
+            buttonText.textContent = 'Schedule My Free Consultation';
+            loadingSpinner.style.display = 'none';
+            modalSubmitBtn.disabled = false;
+            modalForm.reset();
+        });
+    </script>
+</body>
+</html>

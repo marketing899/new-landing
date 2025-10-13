@@ -1,0 +1,1000 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free PCOS Doctor Consultation | LAIQA AI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <style>
+    /* Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --primary: #6d28d9;
+      --primary-light: #8b5cf6;
+      --primary-dark: #5b21b6;
+      --secondary: #c084fc;
+      --light: #f9fafb;
+      --dark: #1f2937;
+      --text: #374151;
+      --text-light: #6b7280;
+      --white: #ffffff;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      --transition: all 0.3s ease;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2) format('woff2');
+    }
+    
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYAZ9hiA.woff2) format('woff2');
+    }
+    
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuFuYAZ9hiA.woff2) format('woff2');
+    }
+    
+    h1, h2, h3, h4 {
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    h2 {
+      font-size: 2rem;
+    }
+    
+    h3 {
+      font-size: 1.75rem;
+    }
+    
+    h4 {
+      font-size: 1.25rem;
+    }
+    
+    p {
+      margin-bottom: 1rem;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    .section {
+      padding: 5rem 0;
+    }
+    
+    .btn {
+      display: inline-block;
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+    }
+    
+    .btn:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .btn-lg {
+      padding: 1rem 2rem;
+      font-size: 1.125rem;
+    }
+    
+    .btn-block {
+      display: block;
+      width: 100%;
+    }
+    
+    .text-center {
+      text-align: center;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--secondary) 100%);
+    }
+    
+    .card {
+      background-color: var(--white);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    /* Hero Section */
+    .hero {
+      padding: 4rem 0;
+      color: var(--white);
+    }
+    
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+    
+    @media (min-width: 768px) {
+      .hero-content {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    .hero-form {
+      background-color: var(--white);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-2xl);
+    }
+    
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: var(--dark);
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #d1d5db;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+    
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+    }
+    
+    .lottie-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+    }
+    
+    /* Features Section */
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    @media (min-width: 768px) {
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 992px) {
+      .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .feature-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--primary-light) 100%);
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      color: var(--white);
+      font-size: 1.5rem;
+    }
+    
+    /* Benefits Section */
+    .benefits-container {
+      background-color: var(--white);
+      border-radius: 1rem;
+      box-shadow: var(--shadow-2xl);
+      overflow: hidden;
+    }
+    
+    .benefits-list {
+      list-style: none;
+    }
+    
+    .benefits-list li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+    
+    .benefit-icon {
+      flex-shrink: 0;
+      background-color: #eef2ff;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      color: var(--primary);
+    }
+    
+    /* Journey Section */
+    .journey-steps {
+      position: relative;
+      padding-left: 2rem;
+    }
+    
+    .journey-steps::before {
+      content: '';
+      position: absolute;
+      left: 1rem;
+      top: 2rem;
+      bottom: 2rem;
+      width: 2px;
+      background-color: #e0e7ff;
+    }
+    
+    .step {
+      position: relative;
+      display: flex;
+      margin-bottom: 2rem;
+    }
+    
+    .step-number {
+      flex-shrink: 0;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: var(--primary);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      margin-right: 1.5rem;
+      z-index: 2;
+    }
+    
+    .step-content {
+      flex: 1;
+    }
+    
+    .step-lottie {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+      height: 150px;
+    }
+    
+    /* Testimonials Section */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    @media (min-width: 768px) {
+      .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    .testimonial-card {
+      border-left: 4px solid var(--primary);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .avatar {
+      width: 50px;
+      height: 50px;
+      background-color: #eef2ff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+    
+    .stars {
+      display: flex;
+      color: var(--warning);
+    }
+    
+    /* CTA Section */
+    .cta {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 50%, var(--secondary) 100%);
+      color: var(--white);
+      padding: 4rem 0;
+    }
+    
+    /* Footer */
+    .footer {
+      background-color: var(--dark);
+      color: var(--white);
+      padding: 3rem 0;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .footer h4 {
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .footer-links li::before {
+      content: '•';
+      margin-right: 0.5rem;
+      color: var(--secondary);
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid #374151;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      text-align: center;
+      color: #9ca3af;
+    }
+    
+    /* Floating Button */
+    .floating-button {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-lg);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 1000;
+    }
+    
+    .floating-button.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .floating-button i {
+      font-size: 1.5rem;
+    }
+    
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+    }
+    
+    .modal.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .modal-content {
+      position: relative;
+      background-color: var(--white);
+      margin: 10% auto;
+      padding: 2rem;
+      border-radius: 1rem;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: var(--shadow-2xl);
+      transform: scale(0.9);
+      transition: transform 0.3s ease;
+    }
+    
+    .modal.show .modal-content {
+      transform: scale(1);
+    }
+    
+    .close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      color: #aaa;
+      font-size: 1.75rem;
+      font-weight: bold;
+      cursor: pointer;
+      line-height: 1;
+    }
+    
+    .close:hover {
+      color: var(--dark);
+    }
+    
+    .form-row {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .form-row .form-group {
+      flex: 1;
+      margin-bottom: 0;
+    }
+    
+    /* Loading State */
+    .btn-loading {
+      position: relative;
+      pointer-events: none;
+    }
+    
+    .spinner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      margin: -10px 0 0 -10px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-top: 3px solid var(--white);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.75rem;
+      }
+      
+      .section {
+        padding: 3rem 0;
+      }
+      
+      .form-row {
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero gradient-bg">
+    <div class="container">
+      <div class="hero-content">
+        <div>
+          <h1>Reclaim Your Health: Free Doctor Consultation for PCOS Reversal</h1>
+          <p class="text-lg">Stop managing symptoms and start reversing them. Our expert doctors will help you create a personalized plan to address the root causes of your PCOS.</p>
+          
+          <div class="hero-form">
+            <h3>Get Your Free Consultation Now</h3>
+            <form id="hero-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="hero-first-name">First Name</label>
+                  <input type="text" id="hero-first-name" class="form-control" placeholder="Enter your first name" required>
+                </div>
+                <div class="form-group">
+                  <label for="hero-last-name">Last Name</label>
+                  <input type="text" id="hero-last-name" class="form-control" placeholder="Enter your last name" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="hero-phone">Phone Number</label>
+                <input type="tel" id="hero-phone" class="form-control" placeholder="Enter your phone number" required>
+              </div>
+              <button type="submit" class="btn btn-block">Get My Free Consultation</button>
+              <p class="text-sm text-center" style="margin-top: 1rem; color: var(--text-light);">
+                No credit card required. Limited slots available. Your health journey starts now.
+              </p>
+            </form>
+          </div>
+        </div>
+        <div class="lottie-container">
+          <lottie-player src="https://lottie.host/7a3b5f0e-8faa-4b6d-90d6-2f7d7e3c9b6b/2X6Q8X2rO0.json" background="transparent" speed="1" loop autoplay></lottie-player>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center">You're Not Alone: The Realities of Living with PCOS</h2>
+      <p class="text-center" style="max-width: 700px; margin: 0 auto 3rem;">
+        Polycystic Ovary Syndrome (PCOS) is a complex condition that affects millions of women. From frustrating symptoms to feelings of helplessness, the daily impact is real.
+      </p>
+      
+      <div class="features-grid">
+        <div class="card">
+          <div class="feature-icon">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <h3>Irregular Periods and Fertility Issues</h3>
+          <p>Our doctors provide evidence-based guidance to regulate your cycle and improve your reproductive health.</p>
+        </div>
+        
+        <div class="card">
+          <div class="feature-icon">
+            <i class="fas fa-weight"></i>
+          </div>
+          <h3>Struggling with Weight Gain and Acne</h3>
+          <p>Learn why these are happening and get a medical perspective on how to address them effectively.</p>
+        </div>
+        
+        <div class="card">
+          <div class="feature-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>Mental Well-being Challenges</h3>
+          <p>Our holistic approach considers your emotional health, providing strategies to manage stress and improve mood.</p>
+        </div>
+        
+        <div class="card">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Prevent Long-term Health Risks</h3>
+          <p>Untreated PCOS can lead to serious health issues like diabetes. Take the first step in prevention.</p>
+        </div>
+        
+        <div class="card">
+          <div class="feature-icon">
+            <i class="fas fa-user-md"></i>
+          </div>
+          <h3>Expert Medical Guidance</h3>
+          <p>Cut through conflicting advice with clear, medically-sound guidance from PCOS specialists.</p>
+        </div>
+        
+        <div class="card">
+          <div class="feature-icon">
+            <i class="fas fa-hand-holding-heart"></i>
+          </div>
+          <h3>Personalized Care Plans</h3>
+          <p>Every woman is unique. Get a treatment plan tailored specifically to your body and symptoms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="section" style="background-color: #f0f2f5;">
+    <div class="container">
+      <h2 class="text-center">Why Choose Our PCOS Consultation?</h2>
+      <p class="text-center" style="max-width: 700px; margin: 0 auto 3rem;">
+        Our program isn't a one-size-fits-all solution. It's a comprehensive, personalized strategy crafted by experts.
+      </p>
+      
+      <div class="benefits-container">
+        <div style="padding: 2rem;">
+          <ul class="benefits-list">
+            <li>
+              <div class="benefit-icon">
+                <i class="fas fa-user-md"></i>
+              </div>
+              <div>
+                <h3>Direct Consultation with a PCOS Expert</h3>
+                <p>Ask your questions and get clarity from a doctor specializing in hormone and metabolic health.</p>
+              </div>
+            </li>
+            <li>
+              <div class="benefit-icon">
+                <i class="fas fa-file-medical"></i>
+              </div>
+              <div>
+                <h3>Personalized Health Assessment</h3>
+                <p>The doctor will evaluate your symptoms, medical history, and goals to provide a tailored plan.</p>
+              </div>
+            </li>
+            <li>
+              <div class="benefit-icon">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <div>
+                <h3>Holistic Treatment Approach</h3>
+                <p>Discover how lifestyle changes, nutrition, and exercise can be more effective than relying on drugs alone.</p>
+              </div>
+            </li>
+            <li>
+              <div class="benefit-icon">
+                <i class="fas fa-road"></i>
+              </div>
+              <div>
+                <h3>Clear, Actionable Steps</h3>
+                <p>You'll leave the call with a roadmap of how to begin your journey to managing and reversing PCOS symptoms.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center">Your Journey to Reversal Starts Here</h2>
+      <p class="text-center" style="max-width: 700px; margin: 0 auto 3rem;">
+        This is more than just a call; it's the beginning of a new chapter. Here's what you can expect:
+      </p>
+      
+      <div class="journey-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Book Your Free Consultation</h3>
+            <p>This is the immediate call to action for you. Click the button to express your interest and receive details about upcoming consultation sessions.</p>
+            <div class="step-lottie">
+              <lottie-player src="https://lottie.host/1c31f0b5-ae4c-4d1d-a9c4-cf8a7d5e3a8a/2X6Q8X2rO0.json" background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay></lottie-player>
+            </div>
+          </div>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Receive Your Personalized Roadmap</h3>
+            <p>The doctor will provide initial insights and a customized plan during the call.</p>
+            <div class="step-lottie">
+              <lottie-player src="https://lottie.host/7a3b5f0e-8faa-4b6d-90d6-2f7d7e3c9b6b/2X6Q8X2rO0.json" background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay></lottie-player>
+            </div>
+          </div>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Choose Your Dedicated Care Plan</h3>
+            <p>If you feel confident, you can select from our range of plans tailored to your needs.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Meet Your Expert Team</h3>
+            <p>You will be onboarded with a dedicated doctor, dietitian, and counselor.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h3>Daily Guidance & Support</h3>
+            <p>Enjoy continuous support and monitoring in a private group, ensuring consistency.</p>
+          </div>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">6</div>
+          <div class="step-content">
+            <h3>Achieve Lasting Reversal</h3>
+            <p>With consistent effort and our expert guidance, you'll see real results and reclaim your health.</p>
+            <div class="step-lottie">
+              <lottie-player src="https://lottie.host/1c31f0b5-ae4c-4d1d-a9c4-cf8a7d5e3a8a/2X6Q8X2rO0.json" background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay></lottie-player>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section" style="background-color: #f0f2f5;">
+    <div class="container">
+      <h2 class="text-center">Real Women. Real Results. Real Reversal.</h2>
+      <p class="text-center" style="max-width: 700px; margin: 0 auto 3rem;">
+        Hear from women who have transformed their health with our PCOS reversal program.
+      </p>
+      
+      <div class="testimonials-grid">
+        <div class="card testimonial-card">
+          <div class="testimonial-header">
+            <div class="avatar">AM</div>
+            <div>
+              <h4>Ananya M., 31</h4>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p>"The free consultation was a game-changer. I finally spoke to a doctor who actually listened and understood my struggles. It was the clarity I needed to start my journey."</p>
+        </div>
+        
+        <div class="card testimonial-card">
+          <div class="testimonial-header">
+            <div class="avatar">SR</div>
+            <div>
+              <h4>Seema R., 27</h4>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p>"After years of frustration, my periods are finally regular, and I've lost weight I thought was impossible. The daily support from my doctor and dietitian made all the difference."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <h2 class="text-center">Ready to Take Control? Your Free Consultation Awaits.</h2>
+        <p class="text-center" style="margin-bottom: 2rem; font-size: 1.125rem;">
+          Don't let PCOS symptoms hold you back any longer. This free, no-obligation doctor consultation is your first step towards understanding your body and creating a clear path to lasting health.
+        </p>
+        <div class="text-center">
+          <button id="cta-button" class="btn btn-lg">Book My FREE Consultation Now!</button>
+          <p style="margin-top: 1rem; opacity: 0.85;">No credit card required. Limited slots available. Your health journey starts now.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>LAIQA AI</h4>
+          <p>Expert-led programs to help you understand and work with your hormonal cycles for sustainable health and wellness. Backed by medical science and personalized care.</p>
+        </div>
+        
+        <div>
+          <h4>Program Features</h4>
+          <ul class="footer-links">
+            <li>Free Doctor Consultation</li>
+            <li>Personalized Health Assessment</li>
+            <li>Expert-Led Treatment Plans</li>
+            <li>Daily Monitoring & Support</li>
+            <li>Holistic Approach to PCOS</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-envelope"></i> support@laiqa.ai</p>
+          <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+          <div style="margin-top: 1rem;">
+            <i class="fab fa-facebook-f" style="margin-right: 1rem; font-size: 1.25rem;"></i>
+            <i class="fab fa-instagram" style="margin-right: 1rem; font-size: 1.25rem;"></i>
+            <i class="fab fa-twitter" style="margin-right: 1rem; font-size: 1.25rem;"></i>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2023 LAIQA AI. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Button -->
+  <div id="floating-button" class="floating-button">
+    <i class="fas fa-phone-alt"></i>
+  </div>
+
+  <!-- Consultation Modal -->
+  <div id="consultation-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Book Your Free Consultation</h2>
+      <form id="modal-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="modal-first-name">First Name</label>
+            <input type="text" id="modal-first-name" class="form-control" placeholder="Enter your first name" required>
+          </div>
+          <div class="form-group">
+            <label for="modal-last-name">Last Name</label>
+            <input type="text" id="modal-last-name" class="form-control" placeholder="Enter your last name" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="modal-phone">Phone Number</label>
+          <input type="tel" id="modal-phone" class="form-control" placeholder="Enter your phone number" required>
+        </div>
+        <button type="submit" id="modal-submit" class="btn btn-block">Book Free Consultation</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Modal Functions
+    function openModal() {
+      const modal = document.getElementById('consultation-modal');
+      modal.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeModal() {
+      const modal = document.getElementById('consultation-modal');
+      modal.classList.remove('show');
+      document.body.style.overflow = '';
+    }
+    
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+      const modal = document.getElementById('consultation-modal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+    
+    // Floating button on scroll
+    window.onscroll = function() {
+      const button = document.getElementById('floating-button');
+      if (window.pageYOffset > 300) {
+        button.classList.add('show');
+      } else {
+        button.classList.remove('show');
+      }
+    }
+    
+    // Hero form submission
+    document.getElementById('hero-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const firstName = document.getElementById('hero-first-name').value;
+      const lastName = document.getElementById('hero-last-name').value;
+      const phone = document.getElementById('hero-phone').value;
+      
+      // Open modal after hero form submission
+      document.getElementById('modal-first-name').value = firstName;
+      document.getElementById('modal-last-name').value = lastName;
+      document.getElementById('modal-phone').value = phone;
+      openModal();
+    });
+    
+    // Modal form submission
+    document.getElementById('modal-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const submitBtn = document.getElementById('modal-submit');
+      const originalText = submitBtn.innerHTML;
+      
+      // Show loading state
+      submitBtn.innerHTML = '<div class="spinner"></div> Booking Your Consultation...';
+      submitBtn.classList.add('btn-loading');
+      submitBtn.disabled = true;
+      
+      // Simulate API call
+      setTimeout(() => {
+        const firstName = document.getElementById('modal-first-name').value;
+        const lastName = document.getElementById('modal-last-name').value;
+        const phone = document.getElementById('modal-phone').value;
+        
+        // Show success message
+        alert(`Thank you, ${firstName}! Your free consultation has been booked. We'll contact you at ${phone} shortly.`);
+        
+        // Reset form and button
+        document.getElementById('modal-form').reset();
+        submitBtn.innerHTML = originalText;
+        submitBtn.classList.remove('btn-loading');
+        submitBtn.disabled = false;
+        
+        // Close modal
+        closeModal();
+      }, 2000);
+    });
+    
+    // CTA button click
+    document.getElementById('cta-button').addEventListener('click', openModal);
+    document.getElementById('floating-button').addEventListener('click', openModal);
+    
+    // Close button
+    document.querySelector('.close').addEventListener('click', closeModal);
+  </script>
+</body>
+</html>

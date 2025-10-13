@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCOS Reversal: Free Doctor Consultation | Your Path to Health</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light blue-gray background */
+            color: #334155; /* Darker text */
+        }
+        .section-padding {
+            padding: 4rem 1rem;
+        }
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 6rem 2rem;
+            }
+        }
+        .floating-button {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 1000;
+            display: none; /* Hidden by default */
+            transition: opacity 0.3s ease-in-out;
+            opacity: 0;
+        }
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.6);
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .modal-content {
+            background-color: #ffffff;
+            margin: auto;
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            position: relative;
+            max-width: 90%;
+            width: 500px;
+            transform: translateY(20px);
+            transition: transform 0.3s ease-in-out;
+        }
+        .modal.show {
+            display: flex;
+            opacity: 1;
+        }
+        .modal.show .modal-content {
+            transform: translateY(0);
+        }
+        .close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #94a3b8;
+            cursor: pointer;
+            line-height: 1;
+        }
+        .close-button:hover {
+            color: #64748b;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            padding: 0.75rem 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 0.75rem;
+            width: 100%;
+            font-size: 1rem;
+            color: #334155;
+            transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #6366f1; /* Indigo-500 */
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2); /* Indigo-500 with transparency */
+        }
+        .btn-primary {
+            background-color: #6366f1; /* Indigo-500 */
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+            box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+        }
+        .btn-primary:hover {
+            background-color: #4f46e5; /* Indigo-600 */
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background-color: #e0e7ff; /* Indigo-100 */
+            color: #4f46e5; /* Indigo-600 */
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+        }
+        .btn-secondary:hover {
+            background-color: #c7d2fe; /* Indigo-200 */
+            transform: translateY(-2px);
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            padding: 2rem;
+            transition: transform 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .gradient-bg {
+            background: linear-gradient(to right, #6366f1, #8b5cf6); /* Indigo to Violet */
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .loading-spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #fff;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-indigo-500 to-violet-600 text-white section-padding overflow-hidden">
+        <div class="absolute inset-0 opacity-20" style="background-image: url('https://placehold.co/1920x1080/6366f1/ffffff?text=Abstract+Background'); background-size: cover; background-position: center;"></div>
+        <div class="relative max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 drop-shadow-lg">
+                    Reclaim Your Health: <br class="hidden sm:inline">Free Doctor Consultation for PCOS Reversal
+                </h1>
+                <p class="text-lg sm:text-xl mb-8 opacity-90">
+                    Are you tired of the daily struggles with PCOS? Irregular periods, weight gain, fatigue, and constant worry?
+                    It's time for a change. Discover a holistic, science-backed path to manage and reverse PCOS symptoms naturally.
+                </p>
+                <p class="text-xl sm:text-2xl font-semibold mb-8">
+                    Start your journey to lasting well-being with a <span class="text-yellow-300">FREE expert doctor consultation</span> today!
+                </p>
+                <form id="hero-form" class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl max-w-md mx-auto md:mx-0">
+                    <h3 class="text-2xl font-bold text-indigo-700 mb-6">Book Your Free Consultation</h3>
+                    <div class="mb-4">
+                        <input type="text" id="hero-name" name="name" placeholder="Your Full Name" required class="w-full">
+                    </div>
+                    <div class="mb-6">
+                        <input type="tel" id="hero-phone" name="phone" placeholder="Your Phone Number" required class="w-full">
+                    </div>
+                    <button type="submit" class="btn-primary w-full text-lg">
+                        Get My Free Consultation
+                    </button>
+                    <p class="text-sm text-gray-500 mt-4">No credit card required. Zero commitment.</p>
+                </form>
+            </div>
+            <div class="md:w-1/2 mt-12 md:mt-0">
+                <img src="https://placehold.co/600x400/ffffff/6366f1?text=Happy+Woman+PCOS+Reversal" alt="Happy woman embracing a healthy lifestyle" class="rounded-3xl shadow-2xl w-full h-auto object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- The PCOS Challenge Section -->
+    <section class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Understanding the PCOS Challenge</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+                Polycystic Ovary Syndrome (PCOS) is more than just irregular periods. It's a complex hormonal disorder that can significantly impact your life, affecting everything from your reproductive health to your emotional well-being.
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-3">Reproductive Health</h3>
+                    <p class="text-gray-600">PCOS is a leading cause of infertility and irregular menstrual cycles. It can make conception difficult and lead to unpredictable periods, causing immense stress and frustration.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-3">Metabolic & Physical Symptoms</h3>
+                    <p class="text-gray-600">Many women with PCOS experience stubborn weight gain, especially around the abdomen, acne, excessive hair growth (hirsutism), and hair thinning. These symptoms often lead to body image issues and low self-esteem.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-3">Emotional Well-being</h3>
+                    <p class="text-gray-600">The hormonal imbalances and physical symptoms of PCOS can take a toll on mental health, leading to increased anxiety, depression, and mood swings. You're not alone in these feelings.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-3">Long-Term Health Risks</h3>
+                    <p class="text-gray-600">If left unmanaged, PCOS can increase the risk of serious health complications, including type 2 diabetes, heart disease, and sleep apnea. Early intervention is key to preventing these.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-3">Misinformation & Frustration</h3>
+                    <p class="text-gray-600">Navigating PCOS can be overwhelming due to conflicting advice and a lack of clear solutions. Many feel unheard or misunderstood by conventional approaches.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-3">The Promise of Reversal</h3>
+                    <p class="text-gray-600">While often considered chronic, many PCOS symptoms can be significantly managed and even reversed through lifestyle changes. We believe in empowering you with the right tools and knowledge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Holistic Approach Section -->
+    <section class="section-padding gradient-bg text-white">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Your Path to PCOS Reversal Starts Here</h2>
+            <p class="text-lg opacity-90 max-w-3xl mx-auto mb-12">
+                We offer a comprehensive, personalized approach that goes beyond medication to address the root causes of PCOS. Our program focuses on sustainable lifestyle changes, guided by a team of experts.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="text-left">
+                    <h3 class="text-2xl font-bold mb-4">Personalized Care, Real Results</h3>
+                    <p class="text-lg mb-4 opacity-90">
+                        Unlike generic advice, our program is tailored to your unique body and needs. We combine the expertise of doctors, dietitians, and counselors to create a plan that fits your life.
+                    </p>
+                    <ul class="list-disc list-inside space-y-3 text-lg opacity-90">
+                        <li>**Customized Diet Plans:** Delicious and easy-to-follow meal plans designed to balance hormones and reduce insulin resistance.</li>
+                        <li>**Effective Exercise Regimes:** Gentle yet impactful routines that help manage weight and improve overall well-being.</li>
+                        <li>**Stress Management Techniques:** Tools and strategies to reduce the impact of stress, a key factor in hormonal health.</li>
+                        <li>**Continuous Expert Guidance:** Regular check-ins and support from your dedicated care team.</li>
+                    </ul>
+                    <button onclick="openModal()" class="btn-secondary mt-8 text-lg">
+                        Discover Your Personalized Plan
+                    </button>
+                </div>
+                <div class="mt-8 md:mt-0">
+                    <img src="https://placehold.co/600x400/ffffff/8b5cf6?text=Personalized+Care" alt="Personalized care illustration" class="rounded-3xl shadow-2xl w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Journey Section -->
+    <section class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gradient">Your Journey to PCOS Reversal: Step-by-Step</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+                We've designed a clear, supportive path to help you achieve lasting health and well-being.
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card text-left">
+                    <div class="text-indigo-600 text-4xl font-bold mb-4">1</div>
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-3">Register with Us</h3>
+                    <p class="text-gray-600">It all starts with a simple step. Provide your name and phone number to kickstart your journey.</p>
+                </div>
+                <div class="card text-left">
+                    <div class="text-indigo-600 text-4xl font-bold mb-4">2</div>
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-3">Free Doctor Consultation</h3>
+                    <p class="text-gray-600">Connect with our expert doctors for a complimentary session. Discuss your symptoms, concerns, and learn how our personalized approach can help you.</p>
+                </div>
+                <div class="card text-left">
+                    <div class="text-indigo-600 text-4xl font-bold mb-4">3</div>
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-3">Select Your Personalized Plan</h3>
+                    <p class="text-gray-600">Based on your consultation, choose a plan tailored to your specific needs and health goals for effective PCOS management.</p>
+                </div>
+                <div class="card text-left">
+                    <div class="text-indigo-600 text-4xl font-bold mb-4">4</div>
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-3">Seamless Onboarding</h3>
+                    <p class="text-gray-600">Our team ensures a smooth and supportive onboarding process, getting you ready to embrace your new health routine.</p>
+                </div>
+                <div class="card text-left">
+                    <div class="text-indigo-600 text-4xl font-bold mb-4">5</div>
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-3">Dedicated Support Group</h3>
+                    <p class="text-gray-600">A personal counselor will create a private group with you, your doctor, and your dietitian for continuous, integrated support.</p>
+                </div>
+                <div class="card text-left">
+                    <div class="text-indigo-600 text-4xl font-bold mb-4">6</div>
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-3">Daily Monitoring & Guidance</h3>
+                    <p class="text-gray-600">Share your daily diet and exercise routines, ask questions, and receive real-time feedback and encouragement from your expert team.</p>
+                </div>
+                <div class="card text-left lg:col-span-3 lg:mx-auto lg:w-1/2">
+                    <div class="text-indigo-600 text-4xl font-bold mb-4">7</div>
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-3">Consistency Leads to PCOS Reversal</h3>
+                    <p class="text-gray-600">With consistent effort and our expert guidance, you'll see tangible results, moving closer to managing and reversing your PCOS symptoms for a healthier, happier you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section-padding gradient-bg text-white">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Hear From Our Thriving Community</h2>
+            <p class="text-lg opacity-90 max-w-3xl mx-auto mb-12">
+                Real stories of real women who transformed their lives with our PCOS reversal program.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card text-gray-800 text-left">
+                    <p class="italic text-lg mb-4">"I struggled with PCOS for years, feeling hopeless. This program changed everything. My periods are regular, I've lost weight, and I feel more energetic than ever before. The daily support was a game-changer!"</p>
+                    <p class="font-semibold text-indigo-700">- Priya S., 32</p>
+                </div>
+                <div class="card text-gray-800 text-left">
+                    <p class="italic text-lg mb-4">"The personalized diet and exercise plan, combined with the constant guidance from my dietitian and doctor, made managing my PCOS so much easier. I'm finally seeing real progress and feel in control of my health."</p>
+                    <p class="font-semibold text-indigo-700">- Anjali R., 28</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Call to Action Section -->
+    <section class="section-padding bg-white text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-gradient">Ready to Take Control of Your PCOS?</h2>
+            <p class="text-lg text-gray-600 mb-8">
+                Don't let PCOS define your life. Take the first step towards a healthier, happier you.
+                Our free doctor consultation is your opportunity to understand your body better and explore a path to lasting well-being.
+            </p>
+            <button onclick="openModal()" class="btn-primary text-xl px-8 py-4">
+                Book Your FREE Consultation Now!
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>&copy; 2025 Your Company Name. All rights reserved. | <a href="#" class="text-indigo-400 hover:underline">Privacy Policy</a> | <a href="#" class="text-indigo-400 hover:underline">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Floating Button -->
+    <button id="floating-cta" onclick="openModal()" class="floating-button btn-primary text-base px-6 py-3 rounded-full shadow-lg">
+        Book Free Consultation
+    </button>
+
+    <!-- Modal for Consultation Form -->
+    <div id="consultation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2 class="text-3xl font-bold text-indigo-700 mb-6 text-center">Your Free Consultation Awaits!</h2>
+            <p class="text-gray-600 mb-6 text-center">Fill out the form below to schedule your complimentary session with our expert doctor.</p>
+            <form id="modal-form">
+                <div class="mb-4">
+                    <label for="modal-name" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="modal-name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="mb-4">
+                    <label for="modal-email" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="modal-email" name="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="mb-6">
+                    <label for="modal-phone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+                    <input type="tel" id="modal-phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <button type="submit" class="btn-primary w-full text-lg flex items-center justify-center" id="modal-submit-btn">
+                    <span id="button-text">Schedule My Free Consultation</span>
+                    <div id="loading-spinner" class="loading-spinner ml-3 hidden"></div>
+                </button>
+                <p class="text-xs text-gray-500 mt-4 text-center">Your information is safe with us. We respect your privacy.</p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal and button elements
+        const modal = document.getElementById('consultation-modal');
+        const floatingCta = document.getElementById('floating-cta');
+        const heroForm = document.getElementById('hero-form');
+        const modalForm = document.getElementById('modal-form');
+        const modalSubmitBtn = document.getElementById('modal-submit-btn');
+        const buttonText = document.getElementById('button-text');
+        const loadingSpinner = document.getElementById('loading-spinner');
+
+        // Function to open the modal
+        function openModal() {
+            modal.classList.add('show');
+            // Optional: Add a small delay to allow CSS transition to play
+            setTimeout(() => {
+                modal.style.display = 'flex';
+            }, 10);
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            modal.classList.remove('show');
+            // Optional: Add a small delay for CSS transition before hiding completely
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        }
+
+        // Close modal when clicking outside of the content
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Show/hide floating button on scroll
+        window.onscroll = function() {
+            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+                floatingCta.style.display = 'block';
+                setTimeout(() => floatingCta.style.opacity = '1', 10); // Fade in
+            } else {
+                floatingCta.style.opacity = '0'; // Fade out
+                setTimeout(() => floatingCta.style.display = 'none', 300); // Hide after transition
+            }
+        };
+
+        // Handle initial hero form submission
+        heroForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            const name = document.getElementById('hero-name').value;
+            const phone = document.getElementById('hero-phone').value;
+
+            // In a real LeadSquared integration, you would use their specific method here.
+            // This might involve:
+            // 1. LeadSquared's form embed script that automatically handles submission.
+            // 2. Making an API call to LeadSquared's Lead Capture API.
+            // 3. Using LeadSquared's JavaScript tracking script to capture form data.
+
+            // For demonstration, we'll just log and open the full modal
+            console.log('Hero Form Submitted:', { name, phone });
+            alert('Thank you for your interest! Please fill out the full form to book your free consultation.');
+            openModal(); // Open the detailed modal
+        });
+
+        // Handle modal form submission
+        modalForm.addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            buttonText.textContent = 'Submitting...';
+            loadingSpinner.classList.remove('hidden');
+            modalSubmitBtn.disabled = true; // Disable button during submission
+
+            const name = document.getElementById('modal-name').value;
+            const email = document.getElementById('modal-email').value;
+            const phone = document.getElementById('modal-phone').value;
+
+            // --- IMPORTANT: LeadSquared Integration Placeholder ---
+            // Replace this section with your actual LeadSquared form submission logic.
+            // This usually involves:
+            // 1. Using LeadSquared's provided JavaScript snippet for form submission.
+            //    This snippet typically listens for form submissions and sends data to LeadSquared.
+            //    You might need to ensure your form's 'name' attributes match LeadSquared fields.
+            // 2. Directly calling LeadSquared's Lead Capture API via fetch/XMLHttpRequest.
+            //    You'd need your LeadSquared API key and the appropriate endpoint.
+            //    Example (conceptual, not runnable without actual LeadSquared API details):
+            /*
+            try {
+                const response = await fetch('YOUR_LEADSQUARED_API_ENDPOINT', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        // 'Authorization': 'Bearer YOUR_API_KEY' // If API key is needed in header
+                    },
+                    body: JSON.stringify({
+                        FirstName: name,
+                        EmailAddress: email,
+                        Phone: phone,
+                        // ... other LeadSquared fields
+                    })
+                });
+                const result = await response.json();
+                if (response.ok) {
+                    console.log('LeadSquared submission successful:', result);
+                    alert('Thank you! Your free consultation is booked. We will contact you shortly.');
+                    closeModal();
+                } else {
+                    console.error('LeadSquared submission failed:', result);
+                    alert('There was an error booking your consultation. Please try again or contact support.');
+                }
+            } catch (error) {
+                console.error('Network error during LeadSquared submission:', error);
+                alert('A network error occurred. Please check your connection and try again.');
+            }
+            */
+
+            // --- Simulated Submission (for demonstration) ---
+            await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate network delay
+            console.log('Modal Form Submitted (Simulated):', { name, email, phone });
+            alert('Thank you! Your free consultation is booked. We will contact you shortly.');
+            closeModal();
+
+            // Reset button state
+            buttonText.textContent = 'Schedule My Free Consultation';
+            loadingSpinner.classList.add('hidden');
+            modalSubmitBtn.disabled = false;
+            modalForm.reset(); // Clear form fields
+        });
+    </script>
+</body>
+</html>
