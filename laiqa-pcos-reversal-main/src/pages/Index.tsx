@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { CardView, CardViewContent } from "@/components/CardView";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Header from "@/components/Header";
 import CounterStats from "@/components/CounterStats";
@@ -33,8 +34,7 @@ import LLM16 from "@/assets/LLM(16).png";
 import LLM17 from "@/assets/LLM(17).png";
 import LLM18 from "@/assets/LLM(18).png";
 import LLM19 from "@/assets/WhatsApp Image 2025-10-08 at 16.41.23_d5914e3d.jpg";
-import beforeImage from "@/assets/Screenshot 2025-10-08 160657.png";
-import afterImage from "@/assets/Screenshot 2025-10-08 161054.png";
+
 
 const Index = () => {
   const [isFormModalOpen, setIsFormModalOpen] = useState(false);
@@ -127,75 +127,31 @@ const Index = () => {
     }
   ];
 
-  const comparisonData = [
+  const laiquaProgram = [
     {
-      feature: "Personalized doctor consults",
-      laiqa: true,
-      clinic: false,
-      diy: false
+      icon: <TestTube className="w-8 h-8 text-brand-pink" />,
+      title: "Diagnostics",
+      subItems: ["MWQ (Menstrual Wellness Quotient)", "LOQ (Lifestyle Quotient)"]
     },
-    {
-      feature: "Ayurveda + clinical labs",
-      laiqa: true,
-      clinic: false, 
-      diy: false
-    },
-    {
-      feature: "Community support",
-      laiqa: true,
-      clinic: false,
-      diy: false
-    },
-    {
-      feature: "90-day program guarantee",
-      laiqa: true,
-      clinic: false,
-      diy: false
-    },
-    {
-      feature: "Progress tracking", 
-      laiqa: true,
-      clinic: true,
-      diy: false
-    },
-    {
-      feature: "24/7 WhatsApp support",
-      laiqa: true,
-      clinic: false,
-      diy: false
-    }
-  ];
-
-  const includedFeatures = [
     {
       icon: <UserCheck className="w-8 h-8 text-brand-pink" />,
-      title: "Personalized Ayurvedic plan",
-      description: "Custom treatment based on your unique constitution"
-    },
-    {
-      icon: <Calendar className="w-8 h-8 text-brand-pink" />,
-      title: "Weekly doctor consults", 
-      description: "Regular check-ins with qualified specialists"
+      title: "Consults",
+      subItems: ["Ayurvedic Doctor", "Health Coach"]
     },
     {
       icon: <Heart className="w-8 h-8 text-brand-pink" />,
-      title: "Diet & meal plans",
-      description: "Nutritionist-designed meals for hormonal balance"
-    },
-    {
-      icon: <TestTube className="w-8 h-8 text-brand-pink" />,
-      title: "Lab monitoring & interpretation",
-      description: "Track your hormonal improvements with regular tests"
+      title: "Customized Plans",
+      subItems: ["Cycle-sync diet & sleep protocols", "Ayurvedic herbs & nutraceuticals"]
     },
     {
       icon: <MessageCircle className="w-8 h-8 text-brand-pink" />,
-      title: "WhatsApp community support",
-      description: "24/7 peer support and expert guidance"
+      title: "Daily Support",
+      subItems: ["App reminders", "WhatsApp weekly live sessions"]
     },
     {
       icon: <FileText className="w-8 h-8 text-brand-pink" />,
-      title: "Progress reports after 90 days",
-      description: "Comprehensive analysis of your health transformation"
+      title: "Progress Tracking",
+      subItems: ["MWQ scores monthly", "Before-after lab reports"]
     }
   ];
 
@@ -447,80 +403,42 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Comparison Section */}
-      <section className="py-8 md:py-16 px-2 md:px-4">
+      {/* Why choose Laiqa? */}
+      <section id="program" className="py-8 md:py-16 px-4 bg-gradient-section">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-4">
-              Why choose Laiqa over others?
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="tex  t-3xl md:text-4xl font-poppins font-bold mb-4">
+              Why choose Laiqa?
             </h2>
-          </div>
-
-          <div className="overflow-x-auto">
-            <table className="w-full max-w-4xl mx-auto table-auto md:table-fixed min-w-full">
-              <thead>
-                <tr>
-                  <th className="text-left p-1 sm:p-2 md:p-4 font-poppins font-bold break-words"></th>
-                  <th className="p-1 sm:p-2 md:p-4 font-poppins font-bold text-center bg-brand-pink bg-opacity-10 rounded-t-lg border-2 border-brand-pink">
-                    Laiqa
-                  </th>
-                  <th className="p-1 sm:p-2 md:p-4 font-poppins font-bold text-center break-words">Typical Clinic</th>
-                  <th className="p-1 sm:p-2 md:p-4 font-poppins font-bold text-center break-words">DIY Programs</th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparisonData.map((row, index) => (
-                  <tr key={index} className="border-b border-border-light">
-                    <td className="p-1 sm:p-2 md:p-4 font-medium break-words">{row.feature}</td>
-                    <td className="p-1 sm:p-2 md:p-4 text-center bg-brand-pink bg-opacity-5 border-l-2 border-r-2 border-brand-pink">
-                      <Check className="w-6 h-6 text-brand-pink mx-auto" />
-                    </td>
-                    <td className="p-1 sm:p-2 md:p-4 text-center">
-                      {row.clinic ? (
-                        <Check className="w-6 h-6 text-green-500 mx-auto" />
-                      ) : (
-                        <X className="w-6 h-6 text-gray-400 mx-auto" />
-                      )}
-                    </td>
-                    <td className="p-1 sm:p-2 md:p-4 text-center">
-                      {row.diy ? (
-                        <Check className="w-6 h-6 text-green-500 mx-auto" />
-                      ) : (
-                        <X className="w-6 h-6 text-gray-400 mx-auto" />
-                      )}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* What's Included */}
-      <section id="program" className="py-8 md:py-16 px-4 bg-gray-50">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold mb-4">
-              What's included in your program?
-            </h2>
+            <p className="text-lg text-body-text max-w-3xl mx-auto">
+              A comprehensive program combining personalized care, modern diagnostics, and community support
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {includedFeatures.map((feature, index) => (
-              <Card key={index} className="shadow-card hover:shadow-card-hover transition-shadow border-border-light">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0">
+            {laiquaProgram.map((feature, index) => (
+              <CardView key={index} className="relative shadow-card hover:shadow-card-hover transition-all duration-300 border-border-light hover:scale-105 animate-fade-in bg-white" style={{ animationDelay: `${index * 200}ms` }}>
+                <CardViewContent className="p-8">
+                  <div className="flex flex-col items-center gap-6 text-center">
+                    <div className="w-16 h-16 bg-gradient-to-br from-brand-pink/10 to-brand-blue/10 rounded-full flex items-center justify-center">
                       {feature.icon}
                     </div>
-                    <div>
-                      <h3 className="font-poppins font-bold text-lg mb-2">{feature.title}</h3>
-                      <p className="text-body-text">{feature.description}</p>
+                    <div className="space-y-3">
+                      <h3 className="font-poppins font-bold text-xl mb-3">{feature.title}</h3>
+                      <div className="space-y-2">
+                        {feature.subItems.map((subItem, subIndex) => (
+                          <p key={subIndex} className="text-sm text-body-text leading-relaxed">{subItem}</p>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
+                </CardViewContent>
+                {index < laiquaProgram.length - 1 && (
+                  <div className="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 w-8 h-8">
+                    <ArrowRight className="w-6 h-6 text-brand-pink animate-pulse" />
+                  </div>
+                )}
+              </CardView>
             ))}
           </div>
         </div>
@@ -583,6 +501,50 @@ const Index = () => {
               </p>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      {/* Additional Card View Section */}
+      <section className="py-8 md:py-16 px-4 bg-gradient-section">
+        <div className="container mx-auto">
+          <div className="text-center mb-8 animate-fade-in">
+            <h2 className="text-2xl md:text-3xl font-poppins font-bold mb-4">
+              Your PCOS Reversal Journey Starts Here
+            </h2>
+            <p className="text-lg text-body-text max-w-2xl mx-auto">
+              Join the community of women transforming their health naturally
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <CardView className="shadow-card hover:shadow-card-hover transition-all duration-300 border-border-light hover:scale-105 animate-fade-in bg-white">
+              <CardViewContent className="p-8">
+                <div className="grid md:grid-cols-3 gap-6 text-center">
+                  <div className="space-y-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-brand-pink to-brand-pink-hover text-white rounded-full flex items-center justify-center mx-auto font-poppins font-bold text-lg shadow-lg">
+                      1
+                    </div>
+                    <h3 className="font-poppins font-bold text-lg">Start Today</h3>
+                    <p className="text-sm text-body-text">Begin your personalized 90-day program</p>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-brand-pink to-brand-pink-hover text-white rounded-full flex items-center justify-center mx-auto font-poppins font-bold text-lg shadow-lg">
+                      2
+                    </div>
+                    <h3 className="font-poppins font-bold text-lg">Track Progress</h3>
+                    <p className="text-sm text-body-text">Monitor your transformation weekly</p>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-brand-pink to-brand-pink-hover text-white rounded-full flex items-center justify-center mx-auto font-poppins font-bold text-lg shadow-lg">
+                      3
+                    </div>
+                    <h3 className="font-poppins font-bold text-lg">Achieve Results</h3>
+                    <p className="text-sm text-body-text">Experience natural PCOS reversal</p>
+                  </div>
+                </div>
+              </CardViewContent>
+            </CardView>
+          </div>
         </div>
       </section>
 
